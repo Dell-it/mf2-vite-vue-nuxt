@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     ssr: false,
     routeRules: {
         '/mf/**': {
-            redirect: 'http://localhost:4174/mf/**',
+            proxy: 'http://localhost:4174/mf/**',
         }
     },
     vite: {

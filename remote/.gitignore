@@ -1,8 +1,6 @@
 # Nuxt dev/build outputs
 .output
 .data
-.nuxt
-.nitro
 .cache
 dist
 
@@ -17,11 +15,12 @@ logs
 .DS_Store
 .fleet
 .idea
+.vscode
 
 # Local env files
 .env
 .env.*
 !.env.example
 
-#Module Federation
+# Module Federation
 .__mf__temp

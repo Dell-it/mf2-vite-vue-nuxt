@@ -1,0 +1,20 @@
+{
+  "name": "mf2-vite-vue-nuxt",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Runtime Module Federation + Vite. Vue3 in Nuxt 3",
+  "scripts": {
+    "install": "pnpm --filter mf2-app-* install",
+    "dev": "pnpm --filter mf2-app-* dev",
+    "build": "pnpm --filter mf2-app-* build",
+    "preview": "pnpm --filter mf2-app-* preview"
+  },
+  "author": {
+    "name": "Zhuravlev Victor",
+    "email": "victor.zhuravlew@gmail.com",
+    "url": "https://github.com/Dell-it/mf2-vite-vue-nuxt"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
