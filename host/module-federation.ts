@@ -16,12 +16,12 @@ export const configuration = {
     remotes: [
         {
             name: "manifest",
-            entry: "http://localhost:4174/mf/mf-manifest.json",
+            entry: "/mf/mf-manifest.json",
             alias: "manifest_alias"
         },
         {
             name: "remote",
-            entry: "http://localhost:4174/mf/remoteEntry.js",
+            entry: "/mf/remoteEntry.js",
             type: 'module',
             alias: "remote_alias"
         },
