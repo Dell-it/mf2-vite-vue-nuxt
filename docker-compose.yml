@@ -1,0 +1,32 @@
+services:
+  # Traefik обратный прокси
+  traefik:
+    image: traefik:v2.10
+    command:
+      - "--api.insecure=true"  # Включает панель мониторинга Traefik (не рекомендуется в продакшн)
+      - "--entrypoints.web.address=:3001"  # HTTP порт для прослушивания
+      - "--providers.docker=true"  # Подключаем Docker как провайдер
+    ports:
+      - "3001:3001"    # HTTP порт для Traefik
+      - "8080:8080"    # Панель управления Traefik (не рекомендуется в продакшн)
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"  # Для доступа к Docker API
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"
+#      # Прокси для /mf/**
+#      - "traefik.http.routers.mf.rule=PathPrefix(`/mf`)"  # Все запросы с /mf будут направлены на сервис
+#      - "traefik.http.services.mf.loadbalancer.server.port=4174"  # Порт для /mf
+#      - "traefik.http.services.mf.loadbalancer.server.scheme=http"  # Прокси на локальный сервис
+#      - "traefik.http.services.mf.loadbalancer.server.url=http://host.docker.internal:4174"  # Прокси на хост
+
+      # Прокси для всех остальных запросов
+      - "traefik.http.routers.nuxt.rule=PathPrefix(`/`)"  # Все запросы с / будут направлены на Nuxt
+      - "traefik.http.services.nuxt.loadbalancer.server.port=3000"  # Порт для Nuxt
+      - "traefik.http.services.nuxt.loadbalancer.server.scheme=http"  # Прокси на локальный сервис
+      - "traefik.http.services.nuxt.loadbalancer.server.url=http://192.168.65.0:3000"  # Прокси на хост
+
+networks:
+  default:
+      name: web
+      external: true

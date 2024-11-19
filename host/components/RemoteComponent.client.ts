@@ -1,6 +1,6 @@
 import {loadRemote, getInstance} from "@module-federation/enhanced/runtime";
 import {init} from "@module-federation/enhanced/runtime";
-import {configuration} from "~/module-federation";
+import {configuration} from "~/module-federation.config";
 
 type ESModule<T = any> = {
     default: T

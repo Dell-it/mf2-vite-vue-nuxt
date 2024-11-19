@@ -9,7 +9,7 @@ import { federation } from "@module-federation/vite";
 // https://vite.dev/config/
 export default defineConfig({
   server: {
-    // origin: "http://localhost:4174",
+    origin: "http://localhost:4174",
     port: 4174
   },
   base: '/mf',
@@ -19,7 +19,6 @@ export default defineConfig({
       filename: "remoteEntry.js",
       manifest: {
         fileName: "mf-manifest.json",
-        filePath: './',
       },
       exposes: {
         "./remote-component": "./src/components/TestComponent.vue",
@@ -32,7 +31,6 @@ export default defineConfig({
           requiredVersion: "^3.5.12", // Укажите ту же версию, что и в хосте
         },
       },
-      remotes: {},
     }),
     vue(),
     vueDevTools(),
