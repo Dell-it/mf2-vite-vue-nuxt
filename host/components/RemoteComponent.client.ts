@@ -12,7 +12,7 @@ if (!inst) {
     init(configuration)
 }
 
-const module = await loadRemote<ESModule>("manifest/remote-component")
+const module = await loadRemote<ESModule>("manifest/remote-component").catch(() => ({default: {render: () => h('div', 'Remote component error')}}))
 
 
 export default module?.default;
