@@ -6,6 +6,9 @@ console.log("Vue version (host):", version);
 
 <template>
   <div>
+    Host APP
+    <br>
+    <br>
     <RemoteComponent>
       Custom content in slot
     </RemoteComponent>

@@ -1,4 +1,3 @@
-import {createProxyMiddleware} from "http-proxy-middleware";
 import path from "node:path";
 
 export default defineNuxtConfig({

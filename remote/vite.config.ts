@@ -12,13 +12,13 @@ export default defineConfig({
     origin: "http://localhost:4174",
     port: 4174
   },
-  base: '/mf',
+  // base: '/',
   plugins: [
     federation({
       name: "remote",
-      filename: "remoteEntry.js",
+      filename: "mf/remoteEntry.js",
       manifest: {
-        fileName: "mf-manifest.json",
+        fileName: "mf/mf-manifest.json",
       },
       exposes: {
         "./remote-component": "./src/components/TestComponent.vue",
