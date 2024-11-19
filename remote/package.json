@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\"",
-    "preview": "vite preview --port 4174",
+    "preview": "vite preview --port 4174 --host 0.0.0.0",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint:oxlint": "oxlint vue3-remote-mf --fix -D correctness --ignore-path .gitignore",
