@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "vite --host",
     "build": "run-p type-check \"build-only {@}\"",
-    "preview": "vite preview --port 4174 --host 0.0.0.0",
+    "preview": "vite preview --port 4174 --host",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint:oxlint": "oxlint vue3-remote-mf --fix -D correctness --ignore-path .gitignore",
