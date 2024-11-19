@@ -9,7 +9,7 @@ import { federation } from "@module-federation/vite";
 // https://vite.dev/config/
 export default defineConfig({
   server: {
-    origin: "http://localhost:4174",
+    origin: "http://0.0.0.0:4174",
     port: 4174
   },
   base: '/mf',
