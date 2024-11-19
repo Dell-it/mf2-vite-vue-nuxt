@@ -1,12 +1,7 @@
+import {createProxyMiddleware} from "http-proxy-middleware";
+import path from "node:path";
+
 export default defineNuxtConfig({
-    app: {
-        head: {
-            script: [
-                {type: 'esms-options', innerHTML: '{ "shimMode": true }'},
-                {src: 'https://unpkg.com/es-module-shims', defer: true},
-            ]
-        }
-    },
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
     ssr: false,
@@ -18,10 +13,8 @@ export default defineNuxtConfig({
     vite: {
         resolve: {
             alias: {
-                // vue: "vue/dist/vue.esm-bundler.js",
-                // "@": path.resolve(__dirname, "src"),
+                "@": path.resolve(__dirname, "src"),
                 // pinia: path.resolve(__dirname, "./node_modules/pinia/dist/pinia.mjs"),
-                // shared: path.resolve(__dirname, "../shared/shared"),
             },
         },
         build: {
