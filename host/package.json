@@ -10,9 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@module-federation/bridge-vue3": "^0.7.6",
+    "@module-federation/enhanced": "^0.7.3",
     "nuxt": "^3.14.159",
     "vue": "latest",
     "vue-router": "latest",
-    "@module-federation/enhanced": "^0.7.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vue-tsc": "^2.1.10"
   }
 }

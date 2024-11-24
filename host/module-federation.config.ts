@@ -1,4 +1,5 @@
 import * as Vue from "vue";
+import * as VueRouter from "vue-router";
 
 export const configuration = {
     name: 'host-app-nuxt',
@@ -8,6 +9,14 @@ export const configuration = {
             lib: () => Vue,
             shareConfig: {
                 requiredVersion: '^3.5.13',
+                singleton: true,
+            }
+        },
+        'vue-router': {
+            version: '4.4.5',
+            lib: () => VueRouter,
+            shareConfig: {
+                requiredVersion: '^4.4.5',
                 singleton: true,
             }
         }

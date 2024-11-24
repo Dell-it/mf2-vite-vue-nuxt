@@ -7,10 +7,17 @@ console.log("Vue version (host):", version);
 <template>
   <div>
     Host APP
+    <nav>
+      <ul>
+      <router-link to="/">Home</router-link>
+      <router-link to="/page">Remote</router-link>
+      </ul>
+    </nav>
     <br>
     <br>
-    <RemoteComponent>
-      Custom content in slot
-    </RemoteComponent>
+    <nuxt-page />
+<!--    <RemoteComponent>-->
+<!--      Custom content in slot-->
+<!--    </RemoteComponent>-->
   </div>
 </template>

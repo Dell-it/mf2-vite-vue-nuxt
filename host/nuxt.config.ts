@@ -9,10 +9,14 @@ export default defineNuxtConfig({
             proxy: 'http://localhost:4174/mf/**',
         }
     },
+    typescript: {
+        typeCheck: true
+    },
     vite: {
         resolve: {
             alias: {
                 "@": path.resolve(__dirname, "src"),
+                // "vue": "vue/dist/vue.esm-bundler.js",
                 // pinia: path.resolve(__dirname, "./node_modules/pinia/dist/pinia.mjs"),
             },
         },
